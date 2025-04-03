@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Amazon</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        .page-header{
+            background-color:rgb(33, 33, 33) ;
+            height: 70px;
+            display: flex;
+            align-items: center;
+            
+        }
+        .header-Image{
+            width: 120px;
+            padding-left: 20px;
+            padding-top: 10px;
+        }
+        .header-Second-Div{
+            margin-left: 60px;
+            align-items: center;
+            position: relative;
+        }
+        .SearchInputField{
+            border-radius: 5px;
+            border: none;
+            padding: 15px;
+            margin-bottom: 5px;
+            padding-right: 161px;
+        }
+        .SearchInputField::placeholder{
+            font-family: Roboto, Arial;
+            font-weight: 800;
+        }
+        .header-search-image{
+            width: 30px;
+            background-color: rgb(254, 189, 105);
+            margin-top: -1px;
+            position:absolute;
+            right: 0;
+            padding: 8px;
+            border-radius: 5px;
+        }
+
+
+        .header-Third-Div{
+            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+            color: white;
+           
+        }
+        .text1{
+            font-weight: 400;
+            font-size: 20px; 
+        }
+        .text2{
+            font-weight: 800;
+            font-size: 20px; 
+        }
+        .header-fourth-Div{
+            position: relative;
+        }
+        .Cart-Image{
+            margin-left: 40px;
+            width: 60px;
+            position: relative;
+        }
+        .Cart-Text{
+            color: white;
+            position: absolute;
+            margin-top: 15px;
+            font-family:  Roboto, Arial;
+            font-weight: 800;
+            font-size: 25px;
+        }
+        .cart-Value{
+            position: absolute;
+            margin-left: 70px;
+            margin-top: -48px;
+            color: rgb(240, 136, 4);
+            font-weight: 800;
+            font-size: 25px;
+        
+        }
+        .page-body{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .Product-div{
+            width: 200px;
+            border: 1px solid rgb(204, 204, 204);
+            padding-top: 20px;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 20px;
+            
+        }
+        .Product-Image{
+            max-width: 100%;
+            max-height: 100%;
+        }
+        .Product-text{
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: 200;
+            font-size: 20px;
+            color: rgb(27, 27, 27);
+            margin-top: 5px;
+        }
+        .Rating-image{
+            width: 120px;
+            margin-top: 5px;
+
+        }
+        .Product-amount{
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+        #No-Of-Items{
+            padding: 5px;
+            border-radius: 10px;
+            border-color: rgb(187, 187, 187);
+            background-color: rgb(236, 236, 236);
+            margin-top: 5px;
+            padding-right: 10px;
+
+        }
+        .AddToCartButton{
+            background-color: rgb(252, 210, 0);
+            padding-left: 65px;
+            padding-right: 65px;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            border: none; 
+            border-radius: 50px;
+            margin-top: 20px;
+            font-family: Roboto, Arial;
+            font-weight: 500;
+        }
+        .AddToCartButton:hover{
+            background-color: rgb(248, 221, 83);
+        }
+    </style>
+</head>
+<body>
+    <div class="page-header">
+       <div class="header-First-Div">
+            <img src="/Images/amazon-logo-white.png" class="header-Image" >
+       </div>
+       <div class="header-Second-Div">
+        <input type="text" placeholder="Search" class="SearchInputField">
+        <img src="/Images/search-icon.png" class="header-search-image">
+       </div>
+       <div class="header-Third-Div">
+            <span class="text1">Returns</span>
+            <span class="text2">& Orders</span>
+       </div>
+       <div class="header-fourth-Section">
+        <img src="/Images/cart-icon.png" class="Cart-Image" >
+        <p class="cart-Value">6</p>
+        <span class="Cart-Text" >Cart</span>
+       </div>
+    </div>
+    <div class="page-body">
+        <div class="Product-div">
+            <div>
+                <img src="/Images/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="Product-Image">
+            </div>
+            <div class="Product-text">
+            Adults Plain Cotton T-Shirt - 2 Pack
+            </div>
+            <div class="Product-rating">
+                <img src="/Images/rating-45.png" class="Rating-image">
+            </div>
+            <div class="Product-amount">
+                $7.99
+            </div>
+            <div>
+                <select name="No-Of-Items" id="No-Of-Items">
+                    <option value="volvo">1</option>
+                    <option value="saab">2</option>
+                    <option value="mercedes">3</option>
+                    <option value="audi">4</option>
+                  </select>
+            </div>
+            <div>
+                <button class="AddToCartButton">Add to Cart</button>
+            </div>
+        </div>
+        <div class="Product-div">
+            <div>
+                <img src="/Images/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="Product-Image">
+            </div>
+            <div class="Product-text">
+            Adults Plain Cotton T-Shirt - 2 Pack
+            </div>
+            <div class="Product-rating">
+                <img src="/Images/rating-45.png" class="Rating-image">
+            </div>
+            <div class="Product-amount">
+                $7.99
+            </div>
+            <div>
+                <select name="No-Of-Items" id="No-Of-Items">
+                    <option value="volvo">1</option>
+                    <option value="saab">2</option>
+                    <option value="mercedes">3</option>
+                    <option value="audi">4</option>
+                  </select>
+            </div>
+            <div>
+                <button class="AddToCartButton">Add to Cart</button>
+            </div>
+        </div>
+        <div class="Product-div">
+            <div>
+                <img src="/Images/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="Product-Image">
+            </div>
+            <div class="Product-text">
+            Adults Plain Cotton T-Shirt - 2 Pack
+            </div>
+            <div class="Product-rating">
+                <img src="/Images/rating-45.png" class="Rating-image">
+            </div>
+            <div class="Product-amount">
+                $7.99
+            </div>
+            <div>
+                <select name="No-Of-Items" id="No-Of-Items">
+                    <option value="volvo">1</option>
+                    <option value="saab">2</option>
+                    <option value="mercedes">3</option>
+                    <option value="audi">4</option>
+                  </select>
+            </div>
+            <div>
+                <button class="AddToCartButton">Add to Cart</button>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
