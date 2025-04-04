@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <title>Amazon</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+    }
+
+    /* Header Styles */
+    .page-header {
+      background-color: rgb(33, 33, 33);
+      height: 70px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 0 20px;
+    }
+
+    .header-Image {
+      width: 120px;
+      padding-top: 10px;
+    }
+
+    .header-Second-Div {
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
+      position: relative;
+      margin-left: 40px;
+    }
+
+    .SearchInputField {
+      width: 100%;
+      border-radius: 5px;
+      border: none;
+      padding: 15px;
+      padding-right: 50px;
+    }
+
+    .SearchInputField::placeholder {
+      font-weight: 800;
+    }
+
+    .header-search-image {
+      width: 46px;
+      background-color: rgb(254, 189, 105);
+      position: absolute;
+      right: 0;
+      padding: 8px;
+      border-radius: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .header-Third-Div {
+      color: white;
+      margin-left: 40px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .text1 {
+      font-weight: 400;
+      font-size: 16px;
+    }
+
+    .text2 {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .header-fourth-Section {
+      position: relative;
+      margin-left: 30px;
+    }
+
+    .Cart-Image {
+      width: 50px;
+    }
+
+    .Cart-Text {
+      color: white;
+      position: absolute;
+      top: 21px;
+      left: 43px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .cart-Value {
+      position: absolute;
+      top: -21px;
+      right: 8px;
+      background-color: white;
+      color: rgb(240, 136, 4);
+      font-weight: 800;
+      font-size: 16px;
+      border-radius: 50%;
+      padding: 2px 8px;
+    }
+
+    /* Body / Product Layout */
+    .page-body {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .Product-div {
+      width: calc(33.33% - 40px);
+      min-width: 200px;
+      max-width: 300px;
+      border: 1px solid rgb(204, 204, 204);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: white;
+    }
+
+    .Product-Image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .Product-text {
+      font-weight: 400;
+      font-size: 18px;
+      color: rgb(27, 27, 27);
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .Rating-image {
+      width: 100px;
+      margin-top: 5px;
+    }
+
+    .Product-amount {
+      font-weight: 700;
+      margin-top: 10px;
+    }
+
+    #No-Of-Items {
+      padding: 5px 10px;
+      border-radius: 10px;
+      border: 1px solid rgb(187, 187, 187);
+      background-color: rgb(236, 236, 236);
+      margin-top: 10px;
+    }
+
+    .AddToCartButton {
+      background-color: rgb(252, 210, 0);
+      padding: 12px 30px;
+      border: none;
+      border-radius: 50px;
+      margin-top: 20px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .AddToCartButton:hover {
+      background-color: rgb(248, 221, 83);
+    }
+
+    /* Responsive Breakpoints */
+    @media screen and (max-width: 1024px) {
+      .Product-div {
+        width: calc(50% - 40px);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .Product-div {
+        width: 100%;
+      }
+
+      .page-header {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+      }
+
+      .header-Second-Div {
+        width: 100%;
+        margin: 10px 0;
+      }
+
+      .SearchInputField {
+        width: 100%;
+      }
+
+      .header-Third-Div,
+      .header-fourth-Section {
+        margin-left: 0;
+        margin-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-header">
+    <div class="header-First-Div">
+      <img src="/Images/amazon-logo-white.png" class="header-Image" />
+    </div>
+    <div class="header-Second-Div">
+      <input type="text" placeholder="Search" class="SearchInputField" />
+      <img src="/Images/search-icon.png" class="header-search-image" />
+    </div>
+    <div class="header-Third-Div">
+      <span class="text1">Returns</span>
+      <span class="text2">& Orders</span>
+    </div>
+    <div class="header-fourth-Section">
+      <img src="/Images/cart-icon.png" class="Cart-Image" />
+      <p class="cart-Value">6</p>
+      <span class="Cart-Text">Cart</span>
+    </div>
+  </div>
+
+  <div class="page-body">
+    <!-- Repeat this Product-div for more products -->
+    <div class="Product-div">
+      <img src="/Images/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="Product-Image" />
+      <div class="Product-text">Adults Plain Cotton T-Shirt - 2 Pack</div>
+      <img src="/Images/rating-45.png" class="Rating-image" />
+      <div class="Product-amount">$7.99</div>
+      <select name="No-Of-Items" id="No-Of-Items">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+      </select>
+      <button class="AddToCartButton">Add to Cart</button>
+    </div>
+
+    <!-- Repeat this Product-div for more products -->
+    <div class="Product-div">
+        <img src="/Images/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="Product-Image" />
+        <div class="Product-text">Adults Plain Cotton T-Shirt - 2 Pack</div>
+        <img src="/Images/rating-45.png" class="Rating-image" />
+        <div class="Product-amount">$7.99</div>
+        <select name="No-Of-Items" id="No-Of-Items">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button class="AddToCartButton">Add to Cart</button>
+      </div>
+      <!-- Repeat this Product-div for more products -->
+    <div class="Product-div">
+        <img src="/Images/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="Product-Image" />
+        <div class="Product-text">Adults Plain Cotton T-Shirt - 2 Pack</div>
+        <img src="/Images/rating-45.png" class="Rating-image" />
+        <div class="Product-amount">$7.99</div>
+        <select name="No-Of-Items" id="No-Of-Items">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button class="AddToCartButton">Add to Cart</button>
+      </div>
+      <!-- Repeat this Product-div for more products -->
+    <div class="Product-div">
+        <img src="/Images/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="Product-Image" />
+        <div class="Product-text">Adults Plain Cotton T-Shirt - 2 Pack</div>
+        <img src="/Images/rating-45.png" class="Rating-image" />
+        <div class="Product-amount">$7.99</div>
+        <select name="No-Of-Items" id="No-Of-Items">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button class="AddToCartButton">Add to Cart</button>
+      </div>
+      <!-- Repeat this Product-div for more products -->
+    <div class="Product-div">
+        <img src="/Images/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="Product-Image" />
+        <div class="Product-text">Adults Plain Cotton T-Shirt - 2 Pack</div>
+        <img src="/Images/rating-45.png" class="Rating-image" />
+        <div class="Product-amount">$7.99</div>
+        <select name="No-Of-Items" id="No-Of-Items">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button class="AddToCartButton">Add to Cart</button>
+      </div>
+      <!-- Repeat this Product-div for more products -->
+    <div class="Product-div">
+        <img src="/Images/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="Product-Image" />
+        <div class="Product-text">Adults Plain Cotton T-Shirt - 2 Pack</div>
+        <img src="/Images/rating-45.png" class="Rating-image" />
+        <div class="Product-amount">$7.99</div>
+        <select name="No-Of-Items" id="No-Of-Items">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+        </select>
+        <button class="AddToCartButton">Add to Cart</button>
+      </div>
+    <!-- Add more .Product-div as needed -->
+    <!-- You already have multiple in your original code, you can reuse this structure -->
+  </div>
+</body>
+</html>
